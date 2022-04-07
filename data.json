@@ -43,67 +43,67 @@
  },
  {
    "Entity": "Ireland",
-   "code": "IRL",
+   "code": "IE",
    "Year": 2019,
    "co2": 109
  },
  {
    "Entity": "Italy",
-   "code": "ITA",
+   "code": "IT",
    "Year": 2019,
    "co2": 118
  },
  {
    "Entity": "Luxembourg",
-   "code": "LUX",
+   "code": "LU",
    "Year": 2019,
    "co2": 129
  },
  {
    "Entity": "Netherlands",
-   "code": "NLD",
+   "code": "NL",
    "Year": 2019,
    "co2": 98
  },
  {
    "Entity": "Norway",
-   "code": "NOR",
+   "code": "NO",
    "Year": 2019,
    "co2": 52
  },
  {
    "Entity": "Portugal",
-   "code": "PRT",
+   "code": "PR",
    "Year": 2019,
    "co2": 103
  },
  {
    "Entity": "Spain",
-   "code": "ESP",
+   "code": "ES",
    "Year": 2019,
    "co2": 120
  },
  {
    "Entity": "Sweden",
-   "code": "SWE",
+   "code": "SE",
    "Year": 2019,
    "co2": 114
  },
  {
    "Entity": "Switzerland",
-   "code": "CHE",
+   "code": "CH",
    "Year": 2019,
    "co2": 134
  },
  {
    "Entity": "Turkey",
-   "code": "TUR",
+   "code": "TR",
    "Year": 2019,
    "co2": 119
  },
  {
    "Entity": "United Kingdom",
-   "code": "GBR",
+   "code": "GB",
    "Year": 2019,
    "co2": 127
  }
