@@ -1,0 +1,110 @@
+[
+ {
+   "Entity": "Austria",
+   "code": "AUT",
+   "Year": 2019,
+   "co2": 121
+ },
+ {
+   "Entity": "Belgium",
+   "code": "BEL",
+   "Year": 2019,
+   "co2": 119
+ },
+ {
+   "Entity": "Denmark",
+   "code": "DNK",
+   "Year": 2019,
+   "co2": 107
+ },
+ {
+   "Entity": "Finland",
+   "code": "FIN",
+   "Year": 2019,
+   "co2": 112
+ },
+ {
+   "Entity": "France",
+   "code": "FRA",
+   "Year": 2019,
+   "co2": 111
+ },
+ {
+   "Entity": "Germany",
+   "code": "DEU",
+   "Year": 2019,
+   "co2": 130
+ },
+ {
+   "Entity": "Greece",
+   "code": "GRC",
+   "Year": 2019,
+   "co2": 114
+ },
+ {
+   "Entity": "Ireland",
+   "code": "IRL",
+   "Year": 2019,
+   "co2": 109
+ },
+ {
+   "Entity": "Italy",
+   "code": "ITA",
+   "Year": 2019,
+   "co2": 118
+ },
+ {
+   "Entity": "Luxembourg",
+   "code": "LUX",
+   "Year": 2019,
+   "co2": 129
+ },
+ {
+   "Entity": "Netherlands",
+   "code": "NLD",
+   "Year": 2019,
+   "co2": 98
+ },
+ {
+   "Entity": "Norway",
+   "code": "NOR",
+   "Year": 2019,
+   "co2": 52
+ },
+ {
+   "Entity": "Portugal",
+   "code": "PRT",
+   "Year": 2019,
+   "co2": 103
+ },
+ {
+   "Entity": "Spain",
+   "code": "ESP",
+   "Year": 2019,
+   "co2": 120
+ },
+ {
+   "Entity": "Sweden",
+   "code": "SWE",
+   "Year": 2019,
+   "co2": 114
+ },
+ {
+   "Entity": "Switzerland",
+   "code": "CHE",
+   "Year": 2019,
+   "co2": 134
+ },
+ {
+   "Entity": "Turkey",
+   "code": "TUR",
+   "Year": 2019,
+   "co2": 119
+ },
+ {
+   "Entity": "United Kingdom",
+   "code": "GBR",
+   "Year": 2019,
+   "co2": 127
+ }
+]
