@@ -3,108 +3,108 @@
    "Entity": "Austria",
    "code": "AT",
    "Year": 2019,
-   "co2": 121
+   "co": 121
  },
  {
    "Entity": "Belgium",
    "code": "BE",
    "Year": 2019,
-   "co2": 119
+   "co": 119
  },
  {
    "Entity": "Denmark",
    "code": "DK",
    "Year": 2019,
-   "co2": 107
+   "co": 107
  },
  {
    "Entity": "Finland",
    "code": "FI",
    "Year": 2019,
-   "co2": 112
+   "co": 112
  },
  {
    "Entity": "France",
    "code": "FR",
    "Year": 2019,
-   "co2": 111
+   "co": 111
  },
  {
    "Entity": "Germany",
    "code": "DE",
    "Year": 2019,
-   "co2": 130
+   "co": 130
  },
  {
    "Entity": "Greece",
    "code": "GR",
    "Year": 2019,
-   "co2": 114
+   "co": 114
  },
  {
    "Entity": "Ireland",
    "code": "IE",
    "Year": 2019,
-   "co2": 109
+   "co": 109
  },
  {
    "Entity": "Italy",
    "code": "IT",
    "Year": 2019,
-   "co2": 118
+   "co": 118
  },
  {
    "Entity": "Luxembourg",
    "code": "LU",
    "Year": 2019,
-   "co2": 129
+   "co": 129
  },
  {
    "Entity": "Netherlands",
    "code": "NL",
    "Year": 2019,
-   "co2": 98
+   "co": 98
  },
  {
    "Entity": "Norway",
    "code": "NO",
    "Year": 2019,
-   "co2": 52
+   "co": 52
  },
  {
    "Entity": "Portugal",
    "code": "PR",
    "Year": 2019,
-   "co2": 103
+   "co": 103
  },
  {
    "Entity": "Spain",
    "code": "ES",
    "Year": 2019,
-   "co2": 120
+   "co": 120
  },
  {
    "Entity": "Sweden",
    "code": "SE",
    "Year": 2019,
-   "co2": 114
+   "co": 114
  },
  {
    "Entity": "Switzerland",
    "code": "CH",
    "Year": 2019,
-   "co2": 134
+   "co": 134
  },
  {
    "Entity": "Turkey",
    "code": "TR",
    "Year": 2019,
-   "co2": 119
+   "co": 119
  },
  {
    "Entity": "United Kingdom",
    "code": "GB",
    "Year": 2019,
-   "co2": 127
+   "co": 127
  }
 ]
