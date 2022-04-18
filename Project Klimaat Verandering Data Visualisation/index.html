@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Klimaat Verandering Data Visualisation</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
+    <link href="css/styles.css?v=1.6" rel="stylesheet">
+    <link href="css/queries.css?v=1.6" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
+      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+      <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+      <script src="https://unpkg.com/topojson@3"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+      <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+      <script src="https://unpkg.com/d3-simple-slider"></script>
+    </head>
+    <body>
+      <section class="pagina" id="pagina">
+        <div class="container">
+              <h1>Data Visualisation Climate Change</h1>
+              <h1>Car Emission</h1>
+              <p class="animated fadeInUpDelay"></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2 col-md-offset-5 text-center">
+              <a href="https://www.youtube.com/embed/QwpZSeX6D0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="pagina-play-btn various fancybox.iframe">Play Button</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <a href="#link_tool" class="get-started-btn">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tool" id="getstarted">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 wp1">
+              <div>
+              <h1 id="link_tool" style= 'margin-top:100px;'> Carbon intensity of passenger vehicles Europe </h1>
+
+                <h3>This interactive chart shows the average carbon intensity (average emission) of passenger vehicles in each country in Europe.
+            
+                  This is measured as the average emissions of CO₂ (in grams) per kilometer travelled across all types of
+                  passenger vehicles.</h3>
+                  <h2> Average carbon intensity of passenger vehicles</h2>
+                  <h4>Choose your year (2001-2019)</h4>
+                </div>
+                  <div class="slidecontainer" id='sliderbar' style='position:absolute; top: 250px; width: 500px;'>
+                    <p>
+                      <input type="range" min="2001" max="2019" step="1" value="2001" class="slider" id="SliderRange">
+                      <span id="monthValue"  style="color: black; font-weight: bold;" >                        
+                      </span>
+                    </input>
+                    </p>
+                  </div>
+                </div>
+               
+                <div id="tooltip"></div>
+                <svg id="map"></svg>
+                <!-- <button id="Reset">RESET</button> -->
+                <svg id="legend">
+            
+                  <g transform="translate(225,35)" id="hoi">
+                    <g class="legendCells" transform="translate(-120,0)">
+                      <rect height="25" width="80" style="fill: rgb(17, 17, 17); stroke: rgb(255, 255, 255); stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="30" y="-7.0"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">No Data</text>
+                    </g>
+                    <g class="legendCells" transform="translate(0,0)">
+                      <rect height="25" width="80" style="fill: rgb(255, 255, 178); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">50 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(80,0)">
+                      <rect height="25" width="80" style="fill: rgb(254, 217, 118); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">75 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(160,0)">
+                      <rect height="25" width="80" style="fill: rgb(254, 178, 76); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">100 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(240,0)">
+                      <rect height="25" width="80" style="fill: rgb(253, 141, 60); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">110 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(320,0)">
+                      <rect height="25" width="80" style="fill: rgb(240, 59, 32); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">120 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(400,0)">
+                      <rect height="25" width="80" style="fill: rgb(189, 0, 38); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">130 gCO₂</text>
+                    </g>
+                    <g class="legendCells" transform="translate(480,0)">
+                      <rect height="25" width="80" style="fill: rgb(112, 0, 23); stroke: black; stroke-width: 2px;">
+                      </rect>
+                      <text class="breakLabels" x="0" y="-7"
+                        style="pointer-events: none; text-anchor: middle; display: block; font-weight: bold;">150+ gCO₂</text>                                                  
+                    </g><text x ="-15" y="-7"></text>
+                  </g>
+                  
+                </svg>
+                <div class="col-md-6 col-md-offset-2 text-center">
+                  <a id = "hello" href="#info" class="get-info-btn">Meer Informatie</a>
+                </div>
+                <svg width="400" height="140">
+                  
+                </svg>
+                <div class="row">
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features" id="features">
+        <div class="container">
+          <h1 id="info"> Informatie over de visualisatie </h1>
+          <div class="row">
+            <div class="col-md-6 features-leftcol wp2">
+              <h1>Data</h1>
+              <p class="margin-bottom">De data bevat de gemiddelde uitstoot per km van passenger vehicles. De dataset beschikt over verschillende landen binnen Europa over de jaren 2001 t/m 2019.  </p>
+              <h1>Auto Uitstoot</h1>
+              <p>Na een gestage daling tussen 2010 en 2016, met bijna 22 g CO2/km, stegen de gemiddelde emissies van nieuwe personenauto's in 2017, 2018 en 2019 tot 122,3 g CO2/km in 2019. Hoewel dit onder de doelstelling voor 2015-2019 van 130 g CO2/km, ruim boven de doelstelling voor 2020-2024 van 95 g CO2/km. </p>
+            </div>
+            <div class="col-md-6 features-rightcol wp3">
+              <h1>Toekomst</h1>
+              <p class="margin-bottom">In de komende jaren wil men streven naar een gemiddelde uitstoot van 95 g CO2/km dit moet bereikt worden in de periode van 2020-2024. In 2019 werden in een nieuwe verordening nieuwe doelstellingen voor het hele wagenpark vastgesteld voor 2025 en 2030, namelijk een reductie van 15% ten opzichte van 2021 tegen 2025 en een reductie van 37,5% tegen 2030. </p>
+              <h1>Visualisatie uitbreiding</h1>
+              <p>De visualisatie zou uitgebreid kunnen worden met data over de hele wereld. Ook zou in de tool tip van de choropleth map een kleine grafiek kunnen geplaatst worden die de daling/stijging van de jaren weergeeft.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/d3@5.11.0/dist/d3.min.js"></script>
+      <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="js/plugins/jquery.fancybox.pack.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/plugins/bootstrap.min.js"></script>
+      <script src="js/map.js"></script>
+      <script src="js/plugins/scripts.js?v=1.7"></script>
+      <!-- <script src="js/jquery.flexslider.js"></script> -->
+      <!-- <script src="js/jquery.smooth-scroll.js"></script> -->
+      <script src="js/plugins/modernizr.js"></script>
+      <script src="js/plugins/waypoints.min.js"></script>
+    </body>
+  </html>
